@@ -1,0 +1,21 @@
+void setup()
+{
+  pinMode(12,OUTPUT);
+  pinMode(A0,INPUT);
+  }
+
+void loop()
+{
+  
+  
+  int signal=analogRead(A1);
+  float voltage=(signal*5.0)/1024;
+  float temC=(voltage-0.5)*100;
+ 
+  if (temC>35){
+  digitalWrite(12,HIGH);
+  }
+  else{
+  digitalWrite(12,LOW);
+  }
+}
